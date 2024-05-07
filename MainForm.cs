@@ -216,6 +216,9 @@ namespace TA_WindowsForm_CalApp
 
         private void BtnEqual_Click(object sender, EventArgs e)
         {
+            //this try catch method is only temporary.
+            //It was only to stop the app form crashing.
+            //Something better will be implemented later
             try 
             {
                 switch (Symbol)
