@@ -8,3 +8,14 @@ C:\Users\Literally\Documents\VisualStudio Apps\TA_WindowsForm_CalApp\obj\Debug\T
 C:\Users\Literally\Documents\VisualStudio Apps\TA_WindowsForm_CalApp\obj\Debug\TA_WindowsForm_CalApp.csproj.CoreCompileInputs.cache
 C:\Users\Literally\Documents\VisualStudio Apps\TA_WindowsForm_CalApp\obj\Debug\TA_WindowsForm_CalApp.exe
 C:\Users\Literally\Documents\VisualStudio Apps\TA_WindowsForm_CalApp\obj\Debug\TA_WindowsForm_CalApp.pdb
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\bin\Debug\TA_WindowsForm_CalApp.exe.config
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\bin\Debug\TA_WindowsForm_CalApp.exe
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\bin\Debug\TA_WindowsForm_CalApp.pdb
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.MainForm.resources
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.Properties.Resources.resources
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.csproj.GenerateResource.cache
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.exe
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.pdb
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.SettingForm.resources
