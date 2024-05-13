@@ -18,3 +18,4 @@ C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_Cal
 C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.csproj.CoreCompileInputs.cache
 C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.exe
 C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.pdb
+C:\Users\andre\Documents\VisualStudioCode\TA_CalApp\obj\Debug\TA_WindowsForm_CalApp.SettingForm.resources

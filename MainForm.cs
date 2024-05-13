@@ -12,6 +12,8 @@ namespace TA_WindowsForm_CalApp
 {
     public partial class MainForm : Form
     {
+        public SettingForm SettingMenu {  get; set; }
+
         private decimal FirstValue = 0;
         private decimal SecondValue = 0;
         private decimal ResultValue = 0;
@@ -259,6 +261,43 @@ namespace TA_WindowsForm_CalApp
             {
                 MessageBox.Show("You did not enter a second value", "Calculator App");
             }
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            SettingMenu = new SettingForm();
+            SettingMenu.SettingChanged += SettingMenu_AddNew;
+            SettingMenu.Show();
+        }
+
+        private void SettingMenu_AddNew(object sender, UserSettings e)
+        {
+            this.BackColor = e.FormBackColor;
+
+            BtnSettings.BackColor = e.BtnBackColor;
+
+            LblEquation.ForeColor = e.ForeColor;
+            TxtBoxNumber.BackColor = e.FormBackColor;
+            TxtBoxNumber.ForeColor = e.ForeColor;
+
+            BtnPercent.BackColor = e.BtnBackColor;
+            BtnClear.BackColor = e.BtnBackColor;
+            BtnDivide.BackColor = e.BtnBackColor;
+            BtnMultiply.BackColor = e.BtnBackColor;
+            BtnSub.BackColor = e.BtnBackColor;
+            BtnPlus.BackColor = e.BtnBackColor;
+            BtnDot.BackColor = e.BtnBackColor;
+            BtnPosNeg.BackColor = e.BtnBackColor;
+            BtnZero.BackColor = e.BtnBackColor;
+            BtnOne.BackColor = e.BtnBackColor;
+            BtnTwo.BackColor = e.BtnBackColor;
+            BtnThree.BackColor = e.BtnBackColor;
+            BtnFour.BackColor = e.BtnBackColor;
+            BtnFive.BackColor = e.BtnBackColor;
+            BtnSix.BackColor = e.BtnBackColor;
+            BtnSeven.BackColor = e.BtnBackColor;
+            BtnEight.BackColor = e.BtnBackColor;
+            BtnNine.BackColor = e.BtnBackColor;
         }
     }
 }
