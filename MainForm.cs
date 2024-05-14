@@ -25,173 +25,300 @@ namespace TA_WindowsForm_CalApp
             InitializeComponent();
         }
 
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            SettingMenu = new SettingForm();
+            SettingMenu.SettingChanged += SettingMenu_AddNew;
+            SettingMenu.Show();
+        }
+
+        private void SettingMenu_AddNew(object sender, UserSettings e)
+        {
+            this.BackColor = e.FormBackColor;
+
+            BtnSettings.BackColor = e.BtnBackColor;
+
+            LblEquation.ForeColor = e.ForeColor;
+            TxtBoxNumber.BackColor = e.FormBackColor;
+            TxtBoxNumber.ForeColor = e.ForeColor;
+
+            BtnPercent.BackColor = e.BtnBackColor;
+            BtnClear.BackColor = e.BtnBackColor;
+            BtnDivide.BackColor = e.BtnBackColor;
+            BtnMultiply.BackColor = e.BtnBackColor;
+            BtnSub.BackColor = e.BtnBackColor;
+            BtnPlus.BackColor = e.BtnBackColor;
+            BtnDot.BackColor = e.BtnBackColor;
+            BtnPosNeg.BackColor = e.BtnBackColor;
+            BtnZero.BackColor = e.BtnBackColor;
+            BtnOne.BackColor = e.BtnBackColor;
+            BtnTwo.BackColor = e.BtnBackColor;
+            BtnThree.BackColor = e.BtnBackColor;
+            BtnFour.BackColor = e.BtnBackColor;
+            BtnFive.BackColor = e.BtnBackColor;
+            BtnSix.BackColor = e.BtnBackColor;
+            BtnSeven.BackColor = e.BtnBackColor;
+            BtnEight.BackColor = e.BtnBackColor;
+            BtnNine.BackColor = e.BtnBackColor;
+        }
+
         private void BtnZero_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "0";
             }
             else
             {
-                TxtBoxNumber.Text += "0";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "0";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "0";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnOne_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "1";
             }
             else
             {
-                TxtBoxNumber.Text += "1";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "1";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "1";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
-            }
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
+            } 
         }
 
         private void BtnTwo_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "2";
             }
             else
             {
-                TxtBoxNumber.Text += "2";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "2";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "2";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnThree_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "3";
             }
             else
             {
-                TxtBoxNumber.Text += "3";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "3";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "3";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnFour_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "4";
             }
             else
             {
-                TxtBoxNumber.Text += "4";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "4";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "4";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnFive_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "5";
             }
             else
             {
-                TxtBoxNumber.Text += "5";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "5";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "5";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnSix_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "6";
             }
             else
             {
-                TxtBoxNumber.Text += "6";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "6";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "6";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnSeven_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "7";
             }
             else
             {
-                TxtBoxNumber.Text += "7";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "7";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "7";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnEight_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "8";
             }
             else
             {
-                TxtBoxNumber.Text += "8";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "8";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "8";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
         private void BtnNine_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text == "0")
+            if (ResultValue > 0 || ResultValue < 0)
             {
+                TxtBoxNumber.Clear();
+                ResultValue = 0;
                 TxtBoxNumber.Text = "9";
             }
             else
             {
-                TxtBoxNumber.Text += "9";
-            }
+                if (TxtBoxNumber.Text == "0")
+                {
+                    TxtBoxNumber.Text = "9";
+                }
+                else
+                {
+                    TxtBoxNumber.Text += "9";
+                }
 
-            if (TxtBoxNumber.Text.Contains("Undefined"))
-            {
-                TxtBoxNumber.Clear();
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                }
             }
         }
 
@@ -205,6 +332,7 @@ namespace TA_WindowsForm_CalApp
             if (TxtBoxNumber.Text.Contains("Undefined"))
             {
                 TxtBoxNumber.Clear();
+                TxtBoxNumber.Text += ".";
             }
         }
 
@@ -224,13 +352,10 @@ namespace TA_WindowsForm_CalApp
         {
             TxtBoxNumber.Clear();
             LblEquation.Text = "";
+            TxtBoxNumber.Text = "0";
             Symbol = string.Empty;
             FirstValue = 0;
             SecondValue = 0;
-            if (String.IsNullOrEmpty(TxtBoxNumber.Text))
-            {
-                TxtBoxNumber.Text = "0";
-            }
         }
 
         private void BtnDivide_Click(object sender, EventArgs e)
@@ -404,43 +529,6 @@ namespace TA_WindowsForm_CalApp
                 TxtBoxNumber.Text = ResultValue.ToString();
                 FirstValue = 0;
             }
-        }
-
-        private void BtnSettings_Click(object sender, EventArgs e)
-        {
-            SettingMenu = new SettingForm();
-            SettingMenu.SettingChanged += SettingMenu_AddNew;
-            SettingMenu.Show();
-        }
-
-        private void SettingMenu_AddNew(object sender, UserSettings e)
-        {
-            this.BackColor = e.FormBackColor;
-
-            BtnSettings.BackColor = e.BtnBackColor;
-
-            LblEquation.ForeColor = e.ForeColor;
-            TxtBoxNumber.BackColor = e.FormBackColor;
-            TxtBoxNumber.ForeColor = e.ForeColor;
-
-            BtnPercent.BackColor = e.BtnBackColor;
-            BtnClear.BackColor = e.BtnBackColor;
-            BtnDivide.BackColor = e.BtnBackColor;
-            BtnMultiply.BackColor = e.BtnBackColor;
-            BtnSub.BackColor = e.BtnBackColor;
-            BtnPlus.BackColor = e.BtnBackColor;
-            BtnDot.BackColor = e.BtnBackColor;
-            BtnPosNeg.BackColor = e.BtnBackColor;
-            BtnZero.BackColor = e.BtnBackColor;
-            BtnOne.BackColor = e.BtnBackColor;
-            BtnTwo.BackColor = e.BtnBackColor;
-            BtnThree.BackColor = e.BtnBackColor;
-            BtnFour.BackColor = e.BtnBackColor;
-            BtnFive.BackColor = e.BtnBackColor;
-            BtnSix.BackColor = e.BtnBackColor;
-            BtnSeven.BackColor = e.BtnBackColor;
-            BtnEight.BackColor = e.BtnBackColor;
-            BtnNine.BackColor = e.BtnBackColor;
         }
     }
 }
