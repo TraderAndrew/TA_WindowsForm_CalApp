@@ -14,10 +14,11 @@ namespace TA_WindowsForm_CalApp
     {
         public SettingForm SettingMenu {  get; set; }
 
-        private decimal FirstValue = 0;
-        private decimal SecondValue = 0;
-        private decimal ResultValue = 0;
-        private string Symbol;
+        public decimal FirstValue;
+        public decimal SecondValue;
+        public decimal ResultValue;
+        public string Symbol = string.Empty;
+
 
         public MainForm()
         {
@@ -34,6 +35,11 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Text += "0";
             }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
+            }
         }
 
         private void BtnOne_Click(object sender, EventArgs e)
@@ -45,6 +51,11 @@ namespace TA_WindowsForm_CalApp
             else
             {
                 TxtBoxNumber.Text += "1";
+            }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
             }
         }
 
@@ -58,6 +69,11 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Text += "2";
             }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
+            }
         }
 
         private void BtnThree_Click(object sender, EventArgs e)
@@ -69,6 +85,11 @@ namespace TA_WindowsForm_CalApp
             else
             {
                 TxtBoxNumber.Text += "3";
+            }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
             }
         }
 
@@ -82,6 +103,11 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Text += "4";
             }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
+            }
         }
 
         private void BtnFive_Click(object sender, EventArgs e)
@@ -93,6 +119,11 @@ namespace TA_WindowsForm_CalApp
             else
             {
                 TxtBoxNumber.Text += "5";
+            }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
             }
         }
 
@@ -106,6 +137,11 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Text += "6";
             }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
+            }
         }
 
         private void BtnSeven_Click(object sender, EventArgs e)
@@ -117,6 +153,11 @@ namespace TA_WindowsForm_CalApp
             else
             {
                 TxtBoxNumber.Text += "7";
+            }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
             }
         }
 
@@ -130,6 +171,11 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Text += "8";
             }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
+            }
         }
 
         private void BtnNine_Click(object sender, EventArgs e)
@@ -142,6 +188,11 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Text += "9";
             }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
+            }
         }
 
         private void BtnDot_Click(object sender, EventArgs e)
@@ -149,6 +200,11 @@ namespace TA_WindowsForm_CalApp
             if (!TxtBoxNumber.Text.Contains("."))
             {
                 TxtBoxNumber.Text += ".";
+            }
+
+            if (TxtBoxNumber.Text.Contains("Undefined"))
+            {
+                TxtBoxNumber.Clear();
             }
         }
 
@@ -164,50 +220,11 @@ namespace TA_WindowsForm_CalApp
             }
         }
 
-        private void BtnDivide_Click(object sender, EventArgs e)
-        {
-            FirstValue = decimal.Parse(TxtBoxNumber.Text);
-            Symbol = "/";
-            LblEquation.Text = $"{FirstValue} {Symbol}";
-            TxtBoxNumber.Clear();
-        }
-
-        private void BtnMultiply_Click(object sender, EventArgs e)
-        {
-            FirstValue = decimal.Parse(TxtBoxNumber.Text);
-            Symbol = "*";
-            LblEquation.Text = $"{FirstValue} {Symbol}";
-            TxtBoxNumber.Clear();
-        }
-
-        private void BtnSub_Click(object sender, EventArgs e)
-        {
-            FirstValue = decimal.Parse(TxtBoxNumber.Text);
-            Symbol = "-";
-            LblEquation.Text = $"{FirstValue} {Symbol}";
-            TxtBoxNumber.Clear();
-        }
-
-        private void BtnPlus_Click(object sender, EventArgs e)
-        {
-            FirstValue = decimal.Parse(TxtBoxNumber.Text);
-            Symbol = "+";
-            LblEquation.Text = $"{FirstValue} {Symbol}";
-            TxtBoxNumber.Clear();
-        }
-
-        private void BtnPercent_Click(object sender, EventArgs e)
-        {
-            FirstValue = decimal.Parse(TxtBoxNumber.Text);
-            Symbol = "%";
-            LblEquation.Text = $"{FirstValue} {Symbol}";
-            TxtBoxNumber.Clear();
-        }
-
         private void BtnClear_Click(object sender, EventArgs e)
         {
             TxtBoxNumber.Clear();
             LblEquation.Text = "";
+            Symbol = string.Empty;
             FirstValue = 0;
             SecondValue = 0;
             if (String.IsNullOrEmpty(TxtBoxNumber.Text))
@@ -216,50 +233,176 @@ namespace TA_WindowsForm_CalApp
             }
         }
 
+        private void BtnDivide_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FirstValue = decimal.Parse(TxtBoxNumber.Text);
+                Symbol = "/";
+                LblEquation.Text = $"{FirstValue} {Symbol}";
+                TxtBoxNumber.Clear();
+            }
+            catch (Exception)
+            {
+                Symbol = "/";
+            }
+        }
+
+        private void BtnMultiply_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FirstValue = decimal.Parse(TxtBoxNumber.Text);
+                Symbol = "*";
+                LblEquation.Text = $"{FirstValue} {Symbol}";
+                TxtBoxNumber.Clear();
+            }
+            catch (Exception)
+            {
+                Symbol = "*";
+            }
+        }
+
+        private void BtnSub_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                FirstValue = decimal.Parse(TxtBoxNumber.Text);
+                Symbol = "-";
+                LblEquation.Text = $"{FirstValue} {Symbol}";
+                TxtBoxNumber.Clear();
+            }
+            catch (Exception)
+            {
+                Symbol = "-";
+            }
+        }
+
+        private void BtnPlus_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                FirstValue = decimal.Parse(TxtBoxNumber.Text);
+                Symbol = "+";
+                LblEquation.Text = $"{FirstValue} {Symbol}";
+                TxtBoxNumber.Clear();
+            } 
+            catch (Exception)
+            {
+                Symbol = "+";
+            }
+            
+        }
+
+        private void BtnPercent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FirstValue = decimal.Parse(TxtBoxNumber.Text);
+                Symbol = "%";
+                LblEquation.Text = $"{FirstValue} {Symbol}";
+                TxtBoxNumber.Clear();
+            }
+            catch (Exception)
+            {
+                Symbol = "%";
+            }
+        }
+
         private void BtnEqual_Click(object sender, EventArgs e)
         {
-            //this try catch method is only temporary.
-            //It was only to stop the app form crashing.
-            //Something better will be implemented later
             try 
             {
                 switch (Symbol)
                 {
                     case "-":
+
                         SecondValue = decimal.Parse(TxtBoxNumber.Text);
-                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue} = ";
                         ResultValue = FirstValue - SecondValue;
+                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue}";
                         TxtBoxNumber.Text = ResultValue.ToString();
+
+                        if (SecondValue == 0)
+                        {
+                            LblEquation.Text = $"{FirstValue} - 0";
+                        }
+
                         break;
+
                     case "+":
+
                         SecondValue = decimal.Parse(TxtBoxNumber.Text);
-                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue} = ";
                         ResultValue = FirstValue + SecondValue;
+                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue}";
                         TxtBoxNumber.Text = ResultValue.ToString();
+
+                        if (SecondValue == 0)
+                        {
+                            LblEquation.Text = $"{FirstValue} + 0";
+                        }
+
                         break;
+
                     case "*":
+
                         SecondValue = decimal.Parse(TxtBoxNumber.Text);
-                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue} = ";
                         ResultValue = FirstValue * SecondValue;
+                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue}";
                         TxtBoxNumber.Text = ResultValue.ToString();
+
+                        if (SecondValue == 0)
+                        {
+                            LblEquation.Text = $"{FirstValue} * 0";
+                        }
+
                         break;
+
                     case "/":
-                        SecondValue = decimal.Parse(TxtBoxNumber.Text);
-                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue} = ";
-                        ResultValue = FirstValue / SecondValue;
-                        TxtBoxNumber.Text = ResultValue.ToString();
+
+                        if (SecondValue == 0)
+                        {
+                            ResultValue = 0;
+                            LblEquation.Text = $"{FirstValue} / 0";
+                            TxtBoxNumber.Text = "Undefined";
+                        }
+                        else
+                        {
+                            SecondValue = decimal.Parse(TxtBoxNumber.Text);
+                            ResultValue = FirstValue / SecondValue;
+                            LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue}";
+                            TxtBoxNumber.Text = ResultValue.ToString();
+                        }
+                        
                         break;
+
                     case "%":
+
                         SecondValue = decimal.Parse(TxtBoxNumber.Text);
-                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue} = ";
                         ResultValue = FirstValue % SecondValue;
+                        LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue}";
                         TxtBoxNumber.Text = ResultValue.ToString();
+
+                        if (SecondValue == 0)
+                        {
+                            LblEquation.Text = $"{FirstValue} % 0";
+                        }
+
+                        break;
+
+                    case "":
+
+                        FirstValue = decimal.Parse(TxtBoxNumber.Text);
+                        LblEquation.Text = $"{FirstValue} = ";
+                        TxtBoxNumber.Text = FirstValue.ToString();
                         break;
                 }
             } 
             catch (Exception) 
             {
-                MessageBox.Show("You did not enter a second value", "Calculator App");
+                LblEquation.Text = $"{FirstValue} = ";
+                ResultValue = FirstValue;
+                TxtBoxNumber.Text = ResultValue.ToString();
+                FirstValue = 0;
             }
         }
 
