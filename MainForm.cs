@@ -39,8 +39,8 @@ namespace TA_WindowsForm_CalApp
             BtnSettings.BackColor = e.BtnBackColor;
 
             LblEquation.ForeColor = e.ForeColor;
-            TxtBoxNumber.BackColor = e.FormBackColor;
             TxtBoxNumber.ForeColor = e.ForeColor;
+            TxtBoxNumber.BackColor = e.FormBackColor;
 
             BtnPercent.BackColor = e.BtnBackColor;
             BtnClear.BackColor = e.BtnBackColor;
@@ -365,7 +365,7 @@ namespace TA_WindowsForm_CalApp
                 FirstValue = decimal.Parse(TxtBoxNumber.Text);
                 Symbol = "/";
                 LblEquation.Text = $"{FirstValue} {Symbol}";
-                TxtBoxNumber.Clear();
+                TxtBoxNumber.Text = "0";
             }
             catch (Exception)
             {
@@ -380,7 +380,7 @@ namespace TA_WindowsForm_CalApp
                 FirstValue = decimal.Parse(TxtBoxNumber.Text);
                 Symbol = "*";
                 LblEquation.Text = $"{FirstValue} {Symbol}";
-                TxtBoxNumber.Clear();
+                TxtBoxNumber.Text = "0";
             }
             catch (Exception)
             {
@@ -395,7 +395,7 @@ namespace TA_WindowsForm_CalApp
                 FirstValue = decimal.Parse(TxtBoxNumber.Text);
                 Symbol = "-";
                 LblEquation.Text = $"{FirstValue} {Symbol}";
-                TxtBoxNumber.Clear();
+                TxtBoxNumber.Text = "0";
             }
             catch (Exception)
             {
@@ -410,7 +410,7 @@ namespace TA_WindowsForm_CalApp
                 FirstValue = decimal.Parse(TxtBoxNumber.Text);
                 Symbol = "+";
                 LblEquation.Text = $"{FirstValue} {Symbol}";
-                TxtBoxNumber.Clear();
+                TxtBoxNumber.Text = "0";
             } 
             catch (Exception)
             {
@@ -426,7 +426,7 @@ namespace TA_WindowsForm_CalApp
                 FirstValue = decimal.Parse(TxtBoxNumber.Text);
                 Symbol = "%";
                 LblEquation.Text = $"{FirstValue} {Symbol}";
-                TxtBoxNumber.Clear();
+                TxtBoxNumber.Text = "0";
             }
             catch (Exception)
             {
