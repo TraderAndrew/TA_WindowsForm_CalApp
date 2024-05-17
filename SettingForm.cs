@@ -40,13 +40,13 @@ namespace TA_WindowsForm_CalApp
                 label1.ForeColor = SystemColors.ControlText;
                 BtnApply.BackColor = SystemColors.Control;
 
-                UserSettings MainColor = new UserSettings() 
+                UserSettings MainFormColor = new UserSettings() 
                 { 
                     FormBackColor = SystemColors.Control,
                     ForeColor = SystemColors.ControlText,
                     BtnBackColor = SystemColors.Control,
                 };
-                SettingChanged(this, MainColor);
+                SettingChanged(this, MainFormColor);
             }
 
             if (radioButton2.Checked)
