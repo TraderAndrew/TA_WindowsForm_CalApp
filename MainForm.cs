@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace TA_WindowsForm_CalApp
 {
     public partial class MainForm : Form
     {
-        public SettingForm SettingMenu {  get; set; }
+        public SettingForm SettingMenu { get; set; }
 
         public decimal FirstValue;
         public decimal SecondValue;
@@ -79,11 +80,22 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Clear();
                 ResultValue = 0;
+                TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 TxtBoxNumber.Text = "0";
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "0";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "0";
                 }
@@ -92,17 +104,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "0";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "0";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -119,7 +125,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "1";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "1";
                 }
@@ -128,17 +144,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "1";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "1";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -155,7 +165,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "2";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "2";
                 }
@@ -164,17 +184,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "2";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "2";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -191,7 +205,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "3";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "3";
                 }
@@ -200,17 +224,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "3";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "3";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -227,7 +245,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "4";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "4";
                 }
@@ -236,17 +264,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "4";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "4";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -263,7 +285,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "5";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "5";
                 }
@@ -272,17 +304,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "5";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "5";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -299,7 +325,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "6";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "6";
                 }
@@ -308,17 +344,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "6";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "6";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -335,7 +365,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "7";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "7";
                 }
@@ -344,17 +384,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "7";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "7";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -371,7 +405,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "8";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "8";
                 }
@@ -380,17 +424,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "8";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "8";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -407,7 +445,17 @@ namespace TA_WindowsForm_CalApp
             }
             else
             {
-                if (TxtBoxNumber.Text == "0")
+                if (TxtBoxNumber.Text.Contains("Undefined"))
+                {
+                    TxtBoxNumber.Clear();
+                    TxtBoxNumber.Text = "9";
+                }
+
+                if (TxtBoxNumber.Text.Length >= 15)
+                {
+                    TxtBoxNumber.Text += "";
+                }
+                else if (TxtBoxNumber.Text == "0")
                 {
                     TxtBoxNumber.Text = "9";
                 }
@@ -416,17 +464,11 @@ namespace TA_WindowsForm_CalApp
                     TxtBoxNumber.Text += "9";
                 }
 
-                if (TxtBoxNumber.Text.Contains("Undefined"))
-                {
-                    TxtBoxNumber.Clear();
-                    TxtBoxNumber.Text = "9";
-                }
-
                 if (TxtBoxNumber.Text.Length >= 12)
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
-                else if (TxtBoxNumber.Text.Length < 12)
+                else
                 {
                     TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -435,7 +477,11 @@ namespace TA_WindowsForm_CalApp
 
         private void BtnDot_Click(object sender, EventArgs e)
         {
-            if (!TxtBoxNumber.Text.Contains("."))
+            if (TxtBoxNumber.Text.Length >= 15)
+            {
+                TxtBoxNumber.Text += "";
+            }
+            else if (!TxtBoxNumber.Text.Contains("."))
             {
                 TxtBoxNumber.Text += ".";
             }
@@ -450,7 +496,7 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             }
-            else if (TxtBoxNumber.Text.Length < 12)
+            else
             {
                 TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             }
@@ -575,7 +621,7 @@ namespace TA_WindowsForm_CalApp
             {
                 TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             }
-            else if (TxtBoxNumber.Text.Length < 12)
+            else
             {
                 TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             }
