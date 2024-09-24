@@ -617,15 +617,6 @@ namespace TA_WindowsForm_CalApp
 
         private void BtnEqual_Click(object sender, EventArgs e)
         {
-            if (TxtBoxNumber.Text.Length >= 12)
-            {
-                TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            }
-            else
-            {
-                TxtBoxNumber.Font = this.TxtBoxNumber.Font = new Font("Microsoft Sans Serif", 40F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            }
-
             try 
             {
                 switch (Symbol)
@@ -695,7 +686,7 @@ namespace TA_WindowsForm_CalApp
                         SecondValue = decimal.Parse(TxtBoxNumber.Text);
                         ResultValue = FirstValue % SecondValue;
                         LblEquation.Text = $"{FirstValue} {Symbol} {SecondValue}";
-                        TxtBoxNumber.Text = ResultValue.ToString();
+                        TxtBoxNumber.Text = $"{ResultValue.ToString()}%";
 
                         if (SecondValue == 0)
                         {
